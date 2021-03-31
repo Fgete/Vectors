@@ -69,6 +69,7 @@ CVect2D CVect2D::operator*(const CVect2D& v)
 {
 	this->f_x *= v.f_x;
 	this->f_y *= v.f_y;
+
 	return *this;
 }
 

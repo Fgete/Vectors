@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CVect3D.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="CVect2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CVect2D.h" />
+    <ClInclude Include="CVect3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
