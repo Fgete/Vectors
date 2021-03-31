@@ -4,6 +4,11 @@
 #include "CVect3D.h"
 
 int main() {
+
+	// ----------------------------------- VECTOR 2 -----------------------------------------
+
+	std::cout << std::endl << "--- VECTOR 2 ---" << std::endl << std::endl;
+
 	CVect2D v0;
 	CVect2D v1(1, 2);
 	CVect2D v2(v1);
@@ -11,6 +16,8 @@ int main() {
 	v0.PrintVect2D(); // Default values --OK
 	v1.PrintVect2D(); // Setting values --OK
 	v2.PrintVect2D(); // Setting vector --OK
+
+	std::cout << std::endl;
 
 	v2 + v1;
 	v2.PrintVect2D(); // + --OK
@@ -25,8 +32,11 @@ int main() {
 	v2.PrintVect2D(); // / --OK
 
 	std::cout << Coincide(v1, v2) << std::endl; // Coincide --OK
+	std::cout << std::endl;
 
-	std::cout << std::endl; // ----------------------------------------------------------------------------
+	// ----------------------------------- VECTOR 3 -----------------------------------------
+
+	std::cout << std::endl << "--- VECTOR 3 ---" << std::endl << std::endl;
 
 	CVect3D v3;
 	CVect3D v4(1, 2, 3);
@@ -40,6 +50,8 @@ int main() {
 	v5.PrintVect3D(); // Setting vector --OK
 	v6.PrintVect3D(); // Setting vector & value --OK
 	v7.PrintVect3D(); // Copier --OK
+
+	std::cout << std::endl;
 
 	v5 + v4;
 	v5.PrintVect3D(); // + --OK

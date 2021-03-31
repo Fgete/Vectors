@@ -8,9 +8,9 @@ private:
 	float f_y;
 public:
 	// BUILDER & DESTRUCTER & COPIER
-	CVect2D(float f_x = 0.0f, float f_y = 0.0f);
+	CVect2D(float f_x = 0.0f, float f_y = 0.0f);	// Basic builder
+	CVect2D(const CVect2D& v);						// Vector2 builder
 	~CVect2D();
-	CVect2D(const CVect2D& v);
 
 	// PRINTER
 	void PrintVect2D() const;
@@ -27,9 +27,9 @@ public:
 	friend bool Coincide(const CVect2D vA, const CVect2D vB);
 
 	// OPERATOR
-	CVect2D operator =(const CVect2D& v);
-	CVect2D operator +(const CVect2D& v);
-	CVect2D operator -(const CVect2D& v);
-	CVect2D operator *(const CVect2D& v);
-	CVect2D operator /(const CVect2D& v);
+	CVect2D operator =(const CVect2D& v); // Operator equal
+	CVect2D operator +(const CVect2D& v); // Operator add
+	CVect2D operator -(const CVect2D& v); // Operator minus
+	CVect2D operator *(const CVect2D& v); // Operator multiply
+	CVect2D operator /(const CVect2D& v); // Operator divide
 };
