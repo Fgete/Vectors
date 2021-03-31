@@ -2,9 +2,8 @@
 
 #include "CVect2D.h"
 
-class CVect3D {
+class CVect3D : public CVect2D {
 private:
-	CVect2D v;
 	float f_z;
 public:
 	// BUILDER & DESTRUCTER & COPIER
@@ -17,13 +16,9 @@ public:
 	void PrintVect3D() const;
 
 	// READER
-	int GetX() const;
-	int GetY() const;
 	int GetZ() const;
 
 	// WRITTER
-	void SetX(float f_x);
-	void SetY(float f_y);
 	void SetZ(float f_z);
 
 	// FRIEND

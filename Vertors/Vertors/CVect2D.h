@@ -4,7 +4,7 @@
 using namespace std;
 
 class CVect2D {
-private:
+protected:
 	float f_x;
 	float f_y;
 public:
