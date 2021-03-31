@@ -1,13 +1,10 @@
-#include <iostream>
-
-#include "CVect2D.h"
 #include "CVect3D.h"
 
 int main() {
 
 	// ----------------------------------- VECTOR 2 -----------------------------------------
 
-	std::cout << std::endl << "--- VECTOR 2 ---" << std::endl << std::endl;
+	cout << endl << " --- VECTOR 2 ---" << endl << endl;
 
 	CVect2D v0;
 	CVect2D v1(1, 2);
@@ -15,9 +12,9 @@ int main() {
 
 	v0.PrintVect2D(); // Default values --OK
 	v1.PrintVect2D(); // Setting values --OK
-	v2.PrintVect2D(); // Setting vector --OK
+	cout << v2 << endl; // Setting vector --OK
 
-	std::cout << std::endl;
+	cout << endl;
 
 	v2 + v1;
 	v2.PrintVect2D(); // + --OK
@@ -31,12 +28,12 @@ int main() {
 	v2 / v1;
 	v2.PrintVect2D(); // / --OK
 
-	std::cout << Coincide(v1, v2) << std::endl; // Coincide --OK
-	std::cout << std::endl;
+	cout << Coincide(v1, v2) << endl; // Coincide --OK
+	cout << endl;
 
 	// ----------------------------------- VECTOR 3 -----------------------------------------
 
-	std::cout << std::endl << "--- VECTOR 3 ---" << std::endl << std::endl;
+	cout << endl << " --- VECTOR 3 ---" << endl << endl;
 
 	CVect3D v3;
 	CVect3D v4(1, 2, 3);
@@ -49,9 +46,9 @@ int main() {
 	v4.PrintVect3D(); // Setting values --OK
 	v5.PrintVect3D(); // Setting vector --OK
 	v6.PrintVect3D(); // Setting vector & value --OK
-	v7.PrintVect3D(); // Copier --OK
+	cout << v7 << endl; // Copier --OK
 
-	std::cout << std::endl;
+	cout << endl;
 
 	v5 + v4;
 	v5.PrintVect3D(); // + --OK
@@ -65,7 +62,7 @@ int main() {
 	v5 / v4;
 	v5.PrintVect3D(); // / --OK
 
-	std::cout << Coincide3D(v4, v5) << std::endl; // Coincide --OK
+	cout << Coincide3D(v4, v5) << endl; // Coincide --OK
 
 	return 0;
 }

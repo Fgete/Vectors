@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+using namespace std;
 
 class CVect2D {
 private:
@@ -32,4 +33,5 @@ public:
 	CVect2D operator -(const CVect2D& v); // Operator minus
 	CVect2D operator *(const CVect2D& v); // Operator multiply
 	CVect2D operator /(const CVect2D& v); // Operator divide
+	friend ostream& operator <<(ostream& os, const CVect2D& v); // Operator flow
 };

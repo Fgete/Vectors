@@ -1,7 +1,5 @@
 #pragma once
 
-#include <iostream>
-
 #include "CVect2D.h"
 
 class CVect3D {
@@ -37,4 +35,5 @@ public:
 	CVect3D operator -(const CVect3D& newVect); // Operator minus
 	CVect3D operator *(const CVect3D& newVect); // Operator multiply
 	CVect3D operator /(const CVect3D& newVect); // Operator divide
+	friend ostream& operator <<(ostream& os, const CVect3D& v); // Operator flow
 };

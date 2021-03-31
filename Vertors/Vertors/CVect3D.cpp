@@ -32,7 +32,7 @@ CVect3D::~CVect3D()
 // Print vector 3D
 void CVect3D::PrintVect3D() const
 {
-	std::cout << "x: " << this->v.GetX() << " | y: " << this->v.GetY() << " | z: " << this->f_z << std::endl;
+	cout << "x: " << this->v.GetX() << " | y: " << this->v.GetY() << " | z: " << this->f_z << endl;
 }
 
 // --- GET METHODES ---
@@ -116,10 +116,17 @@ CVect3D CVect3D::operator/(const CVect3D& newVect)
 		this->f_z /= newVect.f_z;
 	}
 	else {
-		std::cout << "WARNING -- Your trying to divide something by 0 !" << std::endl;
+		cout << "WARNING -- Your trying to divide something by 0 !" << endl;
 	}
 
 	return *this;
+}
+
+// Operator flow
+ostream& operator<<(ostream& os, const CVect3D& v)
+{
+	os << "x: " << v.GetX() << " | y: " << v.GetY() << " | z: " << v.f_z;
+	return os;
 }
 
 // Return bool of coincidence

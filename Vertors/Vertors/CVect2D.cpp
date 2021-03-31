@@ -22,7 +22,7 @@ CVect2D::~CVect2D()
 // Print vector 2
 void CVect2D::PrintVect2D() const
 {
-	std::cout << "x: " << this->f_x << " | y: " << this->f_y << std::endl;
+	cout << "x: " << this->f_x << " | y: " << this->f_y << endl;
 }
 
 // --- GET METHODES ---
@@ -91,10 +91,17 @@ CVect2D CVect2D::operator/(const CVect2D& v)
 		this->f_y = v.f_y;
 	}
 	else{ // There is a 0, we should not divide
-		std::cout << "WARNING -- Your trying to divide something by 0 !" << std::endl;
+		cout << "WARNING -- Your trying to divide something by 0 !" << endl;
 	}
 	
 	return *this;
+}
+
+// Operator flow
+ostream& operator<<(ostream& os, const CVect2D& v)
+{
+	os << "x: " << v.f_x << " | y: " << v.f_y;
+	return os;
 }
 
 // Coincide methode
